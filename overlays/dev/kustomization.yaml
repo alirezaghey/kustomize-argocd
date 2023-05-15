@@ -4,4 +4,8 @@ kind: Kustomization
 bases:
   - ../../base
 
+replicas:
+  - name: nginx
+    count: 5
+
 namePrefix: dev-
