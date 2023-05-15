@@ -10,6 +10,10 @@ spec:
     repoURL: https://github.com/alirezaghey/kustomize-argocd.git
     targetRevision: HEAD
     path: overlays/dev
+    kustomize:
+      replicas:
+        - count: 10
+          name: nginx
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx-dev
