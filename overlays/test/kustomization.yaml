@@ -17,6 +17,6 @@ patches:
 
 replicas:
   - name: nginx
-    count: 8
+    count: 10
 
 namePrefix: test-
