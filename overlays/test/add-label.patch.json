@@ -1,0 +1,7 @@
+[
+  {
+    "op": "add",
+    "path": "/metadata/labels/myCustomLabel",
+    "value": "some_custom_data"
+  }
+]
