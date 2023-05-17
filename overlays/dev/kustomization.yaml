@@ -6,6 +6,6 @@ bases:
 
 replicas:
   - name: dev-nginx
-    count: 5
+    count: 10
 
 namePrefix: dev-
