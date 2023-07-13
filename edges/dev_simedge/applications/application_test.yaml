@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-nginx-argo-application
+  name: argo-test-application
   namespace: argocd
 spec:
   project: default
@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: https://github.com/alirezaghey/kustomize-argocd.git
     targetRevision: HEAD
-    path: overlays/test
+    path: edges/dev_simedge/overlays/test
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx-test
+    namespace: test
 
   syncPolicy:
     syncOptions:

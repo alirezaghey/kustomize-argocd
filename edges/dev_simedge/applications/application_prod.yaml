@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-nginx-argo-application
+  name: argo-prod-application
   namespace: argocd
 spec:
   project: default
@@ -9,14 +9,10 @@ spec:
   source:
     repoURL: https://github.com/alirezaghey/kustomize-argocd.git
     targetRevision: HEAD
-    path: overlays/dev
-    # kustomize:
-    #   replicas:
-    #     - count: 10
-    #       name: nginx
+    path: edges/dev_simedge/overlays/prod
   destination:
     server: https://kubernetes.default.svc
-    namespace: nginx-dev
+    namespace: prod
 
   syncPolicy:
     syncOptions:
